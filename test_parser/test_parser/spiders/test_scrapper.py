@@ -8,8 +8,8 @@ if options:
     len_options = len(options)
 else:
     len_options = 0
-Также, я не смог найти товар не в наличии, поэтому, к сожалению, не смог
-добавить это в выдачу. Было бы интересно узнать у лида, куда смотреть.
+Также, я не смог найти остатки товара на страницах. 
+Было бы интересно узнать у лида, куда смотреть.
 Не уверен, что догодка с переписыванием куки для указания региона
 правильная, но другой я не нашел. Спасибо в любом случае."""
 
@@ -88,6 +88,15 @@ class TestParser(scrapy.Spider):
                                           'original': clean_original_price,
                                           'sale_tag': f'Скидка {discount} %'
         }
+
+        availability = selector.xpath('//link[@itemprop="availability"]/@href').get()
+
+        if 'InStock' in availability:
+            available = True
+        else:
+            available = False
+        
+        self.result_data['stock'] = {'in_stock': available}
 
         view360 = selector.xpath('//a[@class="disabledZoom thumb_3d j-carousel-v360"]//img/@src').extract()
 

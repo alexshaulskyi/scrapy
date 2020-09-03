@@ -10,5 +10,6 @@ class ResultData(scrapy.Item):
     brand = scrapy.Field()
     section = scrapy.Field()
     price_data = scrapy.Field()
+    stock = scrapy.Field()
     assets = scrapy.Field()
     metadata = scrapy.Field()
