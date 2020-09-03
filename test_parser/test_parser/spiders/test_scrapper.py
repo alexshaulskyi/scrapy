@@ -28,7 +28,7 @@ from test_parser.items import ResultData
 class TestParser(scrapy.Spider):
     name = 'TestScrapper'
     start_urls = [
-        'https://www.wildberries.ru/catalog/knigi/detyam-i-roditelyam/obuchenie-chteniyu?page=%s' % page for page in range(1, 5)
+        'https://www.wildberries.ru/catalog/knigi/detyam-i-roditelyam/obuchenie-chteniyu?page=%s' % page for page in range(1, 6)
     ]   
     
     result_data = ResultData()
