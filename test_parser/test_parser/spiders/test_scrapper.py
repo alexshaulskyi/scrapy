@@ -120,6 +120,7 @@ class TestParser(scrapy.Spider):
 
 process = CrawlerProcess({
     'FEED_URI': 'result.json',
+    'FEED_EXPORT_ENCODING': 'utf-8'
 })
 
 process.crawl(TestParser)

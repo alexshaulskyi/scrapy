@@ -13,7 +13,6 @@ SPIDER_MODULES = ['test_parser.spiders']
 NEWSPIDER_MODULE = 'test_parser.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'test_parser (+http://www.yourdomain.com)'
 
