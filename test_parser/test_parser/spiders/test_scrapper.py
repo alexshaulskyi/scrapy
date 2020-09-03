@@ -6,6 +6,8 @@ https://www.wildberries.ru/catalog/14519740/detail.aspx?targetUrl=GP
 options = selector.xpath('//div[@class="options"]//a').extract()
 if options:
     len_options = len(options)
+else:
+    len_options = 0
 Также, я не смог найти товар не в наличии, поэтому, к сожалению, не смог
 добавить это в выдачу. Было бы интересно узнать у лида, куда смотреть.
 Не уверен, что догодка с переписыванием куки для указания региона
